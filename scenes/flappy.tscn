@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ocf3ivceo3eb"]
+
+[ext_resource type="Script" path="res://scripts/Flappy.gd" id="1_aav46"]
+[ext_resource type="SpriteFrames" uid="uid://b0a2atg00valk" path="res://scenes/Flappy.tres" id="2_npm17"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5m3es"]
+radius = 13.0
+
+[node name="Flappy" type="CharacterBody2D"]
+rotation = 1.01927
+script = ExtResource("1_aav46")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_npm17")
+animation = &"Flap"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5m3es")

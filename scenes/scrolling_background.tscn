@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bltrbku1uyl11"]
+
+[ext_resource type="Script" path="res://scripts/ScrollingBackground.gd" id="1_2ennh"]
+[ext_resource type="Texture2D" uid="uid://dlqvy55hcot48" path="res://resources/sprites/background-day.png" id="2_ebowk"]
+
+[node name="ScrollingBackground" type="Node2D"]
+position = Vector2(-593, 0)
+script = ExtResource("1_2ennh")
+
+[node name="BgP1" type="Sprite2D" parent="."]
+position = Vector2(290, 321)
+scale = Vector2(2.02431, 1.27344)
+texture = ExtResource("2_ebowk")
+
+[node name="BgP2" type="Sprite2D" parent="."]
+position = Vector2(872, 321)
+scale = Vector2(2.02431, 1.27344)
+texture = ExtResource("2_ebowk")
+
+[node name="BgP3" type="Sprite2D" parent="."]
+position = Vector2(1454, 321)
+scale = Vector2(2.02431, 1.27344)
+texture = ExtResource("2_ebowk")

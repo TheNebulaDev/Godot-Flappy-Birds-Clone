@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo1yj7q47whur"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_kqhl0"]
+
+[sub_resource type="FontVariation" id="FontVariation_ob38l"]
+variation_embolden = 0.19
+
+[sub_resource type="LabelSettings" id="LabelSettings_ojc8y"]
+font = SubResource("FontVariation_ob38l")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r0uln"]
+font = SubResource("FontVariation_ob38l")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s5te0"]
+font = SubResource("FontVariation_ob38l")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5n5xa"]
+font = SubResource("FontVariation_ob38l")
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 1)
+
+[node name="Score" type="Control" groups=["end_game", "score", "start_game"]]
+top_level = true
+clip_children = 2
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 129.0
+offset_right = 1.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqhl0")
+
+[node name="CurrentScore" type="Label" parent="."]
+z_index = 1000
+layout_mode = 0
+offset_left = 2.0
+offset_top = -110.0
+offset_right = 1152.0
+offset_bottom = -87.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_ojc8y")
+
+[node name="CurrentScoreNumber" type="Label" parent="."]
+z_index = 1000
+layout_mode = 0
+offset_left = 53.0
+offset_top = -109.0
+offset_right = 1149.0
+offset_bottom = -86.0
+text = "0"
+label_settings = SubResource("LabelSettings_r0uln")
+
+[node name="HighScore" type="Label" parent="."]
+z_index = 1000
+layout_mode = 0
+offset_left = 1.0
+offset_top = -131.0
+offset_right = 1151.0
+offset_bottom = -108.0
+text = "HighScore:
+"
+label_settings = SubResource("LabelSettings_s5te0")
+
+[node name="HighScoreNumber" type="Label" parent="."]
+z_index = 1000
+layout_mode = 0
+offset_left = 89.0
+offset_top = -129.0
+offset_right = 1147.0
+offset_bottom = -106.0
+text = "N/A
+"
+label_settings = SubResource("LabelSettings_5n5xa")
